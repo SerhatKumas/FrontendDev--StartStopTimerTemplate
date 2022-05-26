@@ -1,6 +1,5 @@
 # Start-Stop-Timer-Watch
 
-# CircleUp-Event-Website
 Timer that you can start, pause and reset in format of 
 - Hour : Minute : Second : Millisecond
 ## Authors
