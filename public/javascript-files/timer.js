@@ -1,17 +1,26 @@
+//Timer Parameters
 let milliseconds = 0;
 let seconds = 0;
 let minute = 0;
 let hour = 0;
+
+
 let intervalIncrease = null;
 let intervalPrint = null;
+
+//To check whether clock is running or not
 let isRunning = false;
+
+//To check whether clock is reset
 let isReset = false;
 
+//Start button function
 function startTimer() {
-
+   //If clock is started, it can not be started again
    if (isRunning) {
       alert("Clock is already running!");
-   } else {
+   } 
+   else {
       intervalIncrease = setInterval(increaseTime, 10.095);
       intervalPrint = setInterval(printTime, 10);
       isRunning = true;
@@ -21,11 +30,13 @@ function startTimer() {
 
 }
 
+//Reset button function
 function resetTimer() {
-
+   //If clock is reseted, it can not be reseted again
    if (isReset) {
       alert("Clock is already reset!");
-   } else {
+   } 
+   else {
       milliseconds = 0;
       seconds = 0;
       minute = 0;
@@ -39,8 +50,9 @@ function resetTimer() {
 
 }
 
+//Pause button function
 function pauseTimer() {
-
+   //If clock is paused, it can not be paused again
    if (!isRunning && !isReset) {
       alert("Clock is already paused!");
    } else if (!isRunning && isReset) {
@@ -54,10 +66,12 @@ function pauseTimer() {
 
 }
 
+//Increasing time function
 function increaseTime() {
    milliseconds += 1;
 }
 
+//Digitiliazing the timer
 function timeCheck() {
    if (milliseconds >= 100) {
       milliseconds = 0;
@@ -73,6 +87,7 @@ function timeCheck() {
    }
 }
 
+//Printing time in the screen
 function printTime() {
    timeCheck();
 
